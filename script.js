@@ -12,6 +12,10 @@ window.speechSynthesis.onvoiceschanged = () => {
         name, i)));
 };
 
+voiceSelect.addEventListener("change", () =>{
+    speech.voice = voices[voiceSelect.value];
+});
+
 
 document.querySelector("button").addEventListener("click", () =>{
     speech.text = document.querySelector("textarea").value;
